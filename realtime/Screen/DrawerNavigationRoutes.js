@@ -1,14 +1,6 @@
-// Example of Splash, Login and Sign Up in React Native
-// https://aboutreact.com/react-native-login-and-signup/
-
-// Import React
 import React from 'react';
-
-// Import Navigators from React Navigation
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-
-// Import Screens
 import HomeScreen from './DrawerScreens/HomeScreen';
 import SettingsScreen from './DrawerScreens/SettingsScreen';
 import CustomSidebarMenu from './Components/CustomSidebarMenu';
@@ -24,16 +16,16 @@ const homeScreenStack = ({navigation}) => {
         name="HomeScreen"
         component={HomeScreen}
         options={{
-          title: 'Home', //Set Header Title
+          title: 'Home',
           headerLeft: () => (
             <NavigationDrawerHeader navigationProps={navigation} />
           ),
           headerStyle: {
-            backgroundColor: '#307ecc', //Set Header color
+            backgroundColor: '#5a6c78',
           },
-          headerTintColor: '#fff', //Set Header text color
+          headerTintColor: '#fff',
           headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
+            fontWeight: 'bold',
           },
         }}
       />
@@ -50,18 +42,18 @@ const settingScreenStack = ({navigation}) => {
           <NavigationDrawerHeader navigationProps={navigation} />
         ),
         headerStyle: {
-          backgroundColor: '#307ecc', //Set Header color
+          backgroundColor: '#5a6c78',
         },
-        headerTintColor: '#fff', //Set Header text color
+        headerTintColor: '#fff',
         headerTitleStyle: {
-          fontWeight: 'bold', //Set Header text style
+          fontWeight: 'bold',
         },
       }}>
       <Stack.Screen
         name="SettingsScreen"
         component={SettingsScreen}
         options={{
-          title: 'Settings', //Set Header Title
+          title: 'Settings',
         }}
       />
     </Stack.Navigator>

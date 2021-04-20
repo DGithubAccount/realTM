@@ -1,7 +1,3 @@
-// Example of Splash, Login and Sign Up in React Native
-// https://aboutreact.com/react-native-login-and-signup/
-
-// Import React and Component
 import React from 'react';
 import {View, Text, Alert, StyleSheet} from 'react-native';
 
@@ -13,29 +9,23 @@ import {
 
 import AsyncStorage from '@react-native-community/async-storage';
 
-const CustomSidebarMenu = (props) => {
+const CustomSidebarMenu = props => {
   return (
     <View style={stylesSidebar.sideMenuContainer}>
       <View style={stylesSidebar.profileHeader}>
         <View style={stylesSidebar.profileHeaderPicCircle}>
           <Text style={{fontSize: 25, color: '#307ecc'}}>
-            {'About React'.charAt(0)}
+            {'Profile Name'.charAt(0)}
           </Text>
         </View>
-        <Text style={stylesSidebar.profileHeaderText}>
-          AboutReact
-        </Text>
+        <Text style={stylesSidebar.profileHeaderText}>Profile Name</Text>
       </View>
       <View style={stylesSidebar.profileHeaderLine} />
 
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
         <DrawerItem
-          label={({color}) =>
-            <Text style={{color: '#d8d8d8'}}>
-              Logout
-            </Text>
-          }
+          label={({color}) => <Text style={{color: '#d8d8d8'}}>Logout</Text>}
           onPress={() => {
             props.navigation.toggleDrawer();
             Alert.alert(
@@ -71,13 +61,13 @@ const stylesSidebar = StyleSheet.create({
   sideMenuContainer: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#307ecc',
+    backgroundColor: '#5a6c78',
     paddingTop: 40,
     color: 'white',
   },
   profileHeader: {
     flexDirection: 'row',
-    backgroundColor: '#307ecc',
+    backgroundColor: '#5a6c78',
     padding: 15,
     textAlign: 'center',
   },

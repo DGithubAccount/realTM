@@ -1,7 +1,3 @@
-// Example of Splash, Login and Sign Up in React Native
-// https://aboutreact.com/react-native-login-and-signup/
-
-// Import React and Component
 import React from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
 
@@ -21,9 +17,9 @@ const SettingsScreen = () => {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            Example of Splash, Login and Sign Up in React Native
+            Setting Screen
             {'\n\n'}
-            This is the Settings Screen
+            Dashbord
           </Text>
         </View>
         <Text
@@ -32,7 +28,7 @@ const SettingsScreen = () => {
             textAlign: 'center',
             color: 'grey',
           }}>
-          Splash, Login and Register Example{'\n'}React Native
+          Bottom Line Setting Design{'\n'}text line
         </Text>
         <Text
           style={{
@@ -40,7 +36,7 @@ const SettingsScreen = () => {
             textAlign: 'center',
             color: 'grey',
           }}>
-          www.aboutreact.com
+          www.realtime-ctms.com
         </Text>
       </View>
     </SafeAreaView>

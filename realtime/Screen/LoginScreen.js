@@ -76,14 +76,12 @@ const LoginScreen = ({navigation}) => {
   return (
     <View style={styles.mainBody}>
       <Loader loading={loading} />
+
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={styles.scrollStyle}>
         <View style={styles.cantainer}>
-          <Text style={styles.headerTxt}>Login</Text>
           <View style={styles.subView}>
-            <Text style={styles.subTxt}>-- PATIENT PORTAL --</Text>
-            <Text style={styles.nextSubTxt}>REALTIME</Text>
             <KeyboardAvoidingView enabled>
               <View style={{alignItems: 'center'}}>
                 <Image
@@ -129,12 +127,12 @@ const LoginScreen = ({navigation}) => {
                 style={styles.buttonStyle}
                 activeOpacity={0.5}
                 onPress={handleSubmitPress}>
-                <Text style={styles.buttonTextStyle}>LOGIN</Text>
+                <Text style={styles.buttonTextStyle}>Login</Text>
               </TouchableOpacity>
               <Text
                 style={styles.registerTextStyle}
                 onPress={() => navigation.navigate('RegisterScreen')}>
-                New Here ? Register
+                Don't you have account? Register here
               </Text>
             </KeyboardAvoidingView>
           </View>
@@ -161,11 +159,11 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonStyle: {
-    backgroundColor: '#7DE24E',
+    backgroundColor: '#EBC600',
     borderWidth: 0,
     color: '#FFFFFF',
-    borderColor: '#7DE24E',
-    height: 40,
+    borderColor: '#EBC600',
+    height: 50,
     alignItems: 'center',
     borderRadius: 30,
     marginLeft: 35,
@@ -174,13 +172,14 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   buttonTextStyle: {
-    color: '#FFFFFF',
-    paddingVertical: 10,
-    fontSize: 16,
+    color: 'black',
+    paddingVertical: 12,
+    fontWeight: 'bold',
+    fontSize: 18,
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
+    color: 'black',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,
@@ -188,7 +187,7 @@ const styles = StyleSheet.create({
     borderColor: '#dadae8',
   },
   registerTextStyle: {
-    color: '#FFFFFF',
+    color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 14,
@@ -217,9 +216,9 @@ const styles = StyleSheet.create({
   },
   subView: {
     backgroundColor: 'white',
-    height: 900,
-    marginTop: 240,
-    borderTopRightRadius: 40,
-    borderTopLeftRadius: 40,
+    height: 890,
+    marginTop: 390,
+    borderTopRightRadius: 60,
+    borderTopLeftRadius: 60,
   },
 });

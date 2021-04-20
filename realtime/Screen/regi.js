@@ -99,7 +99,7 @@ const RegisterScreen = props => {
       <View
         style={{
           flex: 1,
-          backgroundColor: '#EBC600',
+          backgroundColor: '#307ecc',
           justifyContent: 'center',
         }}>
         <Image
@@ -170,7 +170,23 @@ const RegisterScreen = props => {
                 style={styles.inputStyle}
                 onChangeText={UserPassword => setUserPassword(UserPassword)}
                 underlineColorAndroid="#f000"
-                placeholder="Enter Password"
+                placeholder="Password"
+                placeholderTextColor="#8b9cb5"
+                ref={passwordInputRef}
+                returnKeyType="next"
+                secureTextEntry={true}
+                onSubmitEditing={() =>
+                  ageInputRef.current && ageInputRef.current.focus()
+                }
+                blurOnSubmit={false}
+              />
+            </View>
+            <View style={styles.SectionStyle}>
+              <TextInput
+                style={styles.inputStyle}
+                onChangeText={UserPassword => setUserPassword(UserPassword)}
+                underlineColorAndroid="#f000"
+                placeholder="Confirm Password"
                 placeholderTextColor="#8b9cb5"
                 ref={passwordInputRef}
                 returnKeyType="next"
@@ -186,7 +202,23 @@ const RegisterScreen = props => {
                 style={styles.inputStyle}
                 onChangeText={UserAge => setUserAge(UserAge)}
                 underlineColorAndroid="#f000"
-                placeholder="Enter Age"
+                placeholder="Phone Number"
+                placeholderTextColor="#8b9cb5"
+                keyboardType="numeric"
+                ref={ageInputRef}
+                returnKeyType="next"
+                onSubmitEditing={() =>
+                  addressInputRef.current && addressInputRef.current.focus()
+                }
+                blurOnSubmit={false}
+              />
+            </View>
+            <View style={styles.SectionStyle}>
+              <TextInput
+                style={styles.inputStyle}
+                onChangeText={UserAge => setUserAge(UserAge)}
+                underlineColorAndroid="#f000"
+                placeholder="Date of Birth"
                 placeholderTextColor="#8b9cb5"
                 keyboardType="numeric"
                 ref={ageInputRef}
@@ -257,7 +289,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'black',
+    color: 'white',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,
@@ -277,12 +309,12 @@ const styles = StyleSheet.create({
   },
   cantainer: {
     backgroundColor: '#EBC600',
-    // height: 700,
+    // height: 900,
   },
   subView: {
     backgroundColor: 'white',
-    height: 890,
-    marginTop: 150,
+    height: 990,
+    marginTop: 120,
     borderTopRightRadius: 60,
     borderTopLeftRadius: 60,
   },
@@ -295,6 +327,7 @@ const styles = StyleSheet.create({
   scrollStyle: {
     justifyContent: 'center',
     alignContent: 'center',
+    height: 700,
   },
   imageView: {alignItems: 'center'},
 });
