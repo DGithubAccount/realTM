@@ -20,10 +20,13 @@ const CustomSidebarMenu = props => {
         </View>
         <Text style={stylesSidebar.profileHeaderText}>Profile Name</Text>
       </View>
-      <View style={stylesSidebar.profileHeaderLine} />
-
       <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
+        <DrawerItemList
+          {...props}
+          activeTintColor="#EBC600"
+          // activeBackgroundColor="#EBC600"
+          inactiveTintColor="#5a6c78"
+        />
         <DrawerItem
           label={({color}) => <Text style={{color: '#d8d8d8'}}>Logout</Text>}
           onPress={() => {
@@ -62,30 +65,34 @@ const stylesSidebar = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#5a6c78',
-    paddingTop: 40,
+    paddingTop: 10,
     color: 'white',
   },
   profileHeader: {
-    flexDirection: 'row',
-    backgroundColor: '#5a6c78',
+    backgroundColor: '#EBC600',
     padding: 15,
     textAlign: 'center',
+    height: '25%',
   },
   profileHeaderPicCircle: {
-    width: 60,
-    height: 60,
-    borderRadius: 60 / 2,
+    width: 100,
+    height: 100,
+    borderRadius: 100 / 2,
     color: 'white',
     backgroundColor: '#ffffff',
     textAlign: 'center',
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
+    // marginLeft: 70,
+    marginTop: 30,
   },
   profileHeaderText: {
     color: 'white',
     alignSelf: 'center',
     paddingHorizontal: 10,
     fontWeight: 'bold',
+    marginTop: 15,
   },
   profileHeaderLine: {
     height: 1,
